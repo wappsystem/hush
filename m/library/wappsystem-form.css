@@ -261,9 +261,10 @@
     font-size: 16px;
     color: #6D6F72;
 }
-#D__ID fieldset.subquestions legend {
+#D__ID fieldset legend {
     font-family: 'Nunito Sans';
     font-size: 16px;
+    font-weight: bold;
     color: #00263A;
     line-height: 21px;
     padding-top: 20px;
