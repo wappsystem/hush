@@ -82,7 +82,7 @@
         "hush-bl-physical-activity-data":		            {url:"$H/m/library/physical-activity-data.html",Table:"hush-bl-physical-activity",form_module:"hush-bl-physical-activity-form",task_name:"Baseline - Physical Activity and Sports Performance"},
         "hush-bl-physical-activity-form":		            {url:"$H/m/library/physical-activity-form.html",Table:"hush-bl-physical-activity",task_name:"Baseline - Physical Activity and Sports Performance"},
         "hush-bl-minor-illnesses-data":		            {url:"$H/m/library/minor-illnesses-data.html",Table:"hush-bl-minor-illnesses",form_module:"hush-bl-minor-illnesses-form",task_name:"Baseline - Susceptibility to Minor illnesses"},
-        "hush-bl-minor-illnesses-form":		            {url:"$H/m/library/minor-illnesses-form.html",Table:"hush-bl-isi",task_name:"Baseline - Susceptibility to Minor illnesses"},
+        "hush-bl-minor-illnesses-form":		            {url:"$H/m/library/minor-illnesses-form.html",Table:"hush-bl-minor-illnesses",task_name:"Baseline - Susceptibility to Minor illnesses"},
 
         "hush-w2-isi-data":		            {url:"$H/m/library/isi-data.html",Table:"hush-w2-isi",form_module:"hush-w2-isi-form",task_name:"Week 2 - ISI"},
         "hush-w2-isi-form":		            {url:"$H/m/library/isi-form.html",Table:"hush-w2-isi",task_name:"Week 2 - ISI"},
