@@ -27,17 +27,20 @@
               <div class="form-group">
                 <div class="row">
                   <div class="col-sm control-group">
-                    <h4>1. In the past 2 weeks, have you driven a motor vehicle?</h4>
+                    <h4>1. Do you drive a motor vehicle?</h4>
                   </div>
                 </div>
                 <div class="questiongroup">
                   <fieldset class="pl-4">
                     <label class="radiobuttons ">
-                      <input type="radio" name="driven" value="Yes" required>
+                      <input type="radio" name="drive" value="Yes" required>
                       <span class="checkmark"></span>Yes</label>
                     <label class="radiobuttons ">
-                      <input type="radio" name="driven" value="No">
+                      <input type="radio" name="drive" value="No">
                       <span class="checkmark"></span>No</label>
+                    <label class="radiobuttons ">
+                      <input type="radio" name="drive" value="Don't drive">
+                      <span class="checkmark"></span>Have a driver’s licence but don’t drive
                   </fieldset>
                 </div>
               </div>
@@ -45,27 +48,35 @@
                 <div class="form-group">
                   <div class="row">
                     <div class="col-sm control-group">
-                      <h4>2. In the past 2 weeks, how often have you driven </h4>
+                      <h4>2. How many years have you been driving for?</h4>
                     </div>
                   </div>
                   <div class="questiongroup">
                     <fieldset class="pl-4">
                       <label><span class=""></span>
-                        <select name="frequency" class=form-control>
-                          <option></option>
-                          <option>Not at all</option>
-                          <option>A few times a week</option>
-                          <option>At least once a day</option>
-                          <option>Multiple times per day</option>
-                        </select>
-                      </label><br>
+                        <input class="form-control" type="number" min=0 max=50 name="years">
+                      </label>
                     </fieldset>
                   </div>
                 </div>
                 <div class="form-group">
                   <div class="row">
                     <div class="col-sm control-group">
-                      <h4>3. In the past 2 weeks, has your confidence to drive been impacted?</h4>
+                      <h4>3. If you drive, how many km per year do you drive, on average?</h4>
+                    </div>
+                  </div>
+                  <div class="questiongroup">
+                    <fieldset class="pl-4">
+                      <label><span class=""></span>
+                        <input class="form-control" type="number" name="km_year">
+                      </label>
+                    </fieldset>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="row">
+                    <div class="col-sm control-group">
+                      <h4>4. Does insomnia impact your confidence to drive?</h4>
                     </div>
                   </div>
                   <div class="questiongroup">
@@ -83,42 +94,37 @@
                   </div>
                 </div>
                 <div class="form-group">
-                  <h4>4. In the past 2 weeks, have you had any speeding tickets, parking fines, minor collision or major collision?</h4>
-                  <div class="questiongroup">
-                      <fieldset>
-                          <label class="checkboxes">
-                              <input type="checkbox" name="speeding">
-                              <span class="check_checkmark"></span> Speeding ticket
-                          </label><br>
-                          <label class="checkboxes">
-                              <input type="checkbox" name="parking">
-                              <span class="check_checkmark"></span> Parking fines
-                          </label><br>
-                          <label class="checkboxes">
-                              <input type="checkbox" name="minor">
-                              <span class="check_checkmark"></span> Minor collision
-                          </label><br>
-                          <label class="checkboxes">
-                              <input type="checkbox" name="major">
-                              <span class="check_checkmark"></span> Major collision
-                          </label><br>
-                      </fieldset>
-                  </div>
-              </div>
-              <div class="form-group">
                   <div class="row">
                     <div class="col-sm control-group">
-                      <h4>5. In the past 2 weeks, do you believe that you driving has been unchanged, worse than usual or better than usual?</h4>
+                      <h4>5. Does your insomnia prevent you from driving?</h4>
+                    </div>
+                  </div>
+                  <div class="questiongroup">
+                    <fieldset class="pl-4">
+                      <label class="radiobuttons ">
+                        <input type="radio" name="prevent" value="Yes">
+                        <span class="checkmark"></span>Yes</label>
+                      <label class="radiobuttons ">
+                        <input type="radio" name="prevent" value="No">
+                        <span class="checkmark"></span>No</label>
+                    </fieldset>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="row">
+                    <div class="col-sm control-group">
+                      <h4>6. How often do you usually drive?</h4>
                     </div>
                   </div>
                   <div class="questiongroup">
                     <fieldset class="pl-4">
                       <label><span class=""></span>
-                        <select name="driving" class=form-control>
+                        <select name="frequency" class=form-control>
                           <option></option>
-                          <option>Unchanged</option>
-                          <option>Worse than usual</option>
-                          <option>Better than usual</option>
+                          <option>Not at all</option>
+                          <option>A few times a week</option>
+                          <option>At least once a day</option>
+                          <option>Multiple times per day</option>
                         </select>
                       </label><br>
                     </fieldset>
@@ -144,31 +150,43 @@
       m.load = function () {
         load2();
         //-------------------------------------
-        if ($("#D__ID input[name=driven]:checked").val() != 'No' && $("#D__ID input[name=driven]:checked").val() != undefined) {
-          $("#D__ID select[name=frequency]").prop('required', true);
+        if ($("#D__ID input[name=drive]:checked").val() != 'No' && $("#D__ID input[name=drive]:checked").val() != undefined) {
+          $("#D__ID input[name=years]").prop('required', true);
+          $("#D__ID input[name=km_year]").prop('required', true);
           $("#D__ID select[name=confidence]").prop('required', true);
-          $("#D__ID input[name=driving]").prop('required', true);
+          $("#D__ID input[name=km_years]").prop('required', true);
+          $("#D__ID input[name=prevent]").prop('required', true);
+          $("#D__ID select[name=frequency]").prop('required', true);
           $("#q2__ID").show();
         }
         else {
-          $("#D__ID select[name=frequency]").prop('required', false);
+          $("#D__ID input[name=years]").prop('required', false);
+          $("#D__ID input[name=km_year]").prop('required', false);
           $("#D__ID select[name=confidence]").prop('required', false);
-          $("#D__ID input[name=driving]").prop('required', false);
+          $("#D__ID input[name=km_years]").prop('required', false);
+          $("#D__ID input[name=prevent]").prop('required', false);
+          $("#D__ID select[name=frequency]").prop('required', false);
           $("#q2__ID").hide();
         }
       }
       //-------------------------------------
-      $("#D__ID input[name=driven]").on('click', function () {
+      $("#D__ID input[name=drive]").on('click', function () {
         if ($("#D__ID input[name=drive]:checked").val() != 'No') {
-          $("#D__ID select[name=frequency]").prop('required', true);
+          $("#D__ID input[name=years]").prop('required', true);
+          $("#D__ID input[name=km_year]").prop('required', true);
           $("#D__ID select[name=confidence]").prop('required', true);
-          $("#D__ID input[name=driving]").prop('required', true);
+          $("#D__ID input[name=km_years]").prop('required', true);
+          $("#D__ID input[name=prevent]").prop('required', true);
+          $("#D__ID select[name=frequency]").prop('required', true);
           $("#q2__ID").show();
         }
         else {
-          $("#D__ID select[name=frequency]").prop('required', false);
+          $("#D__ID input[name=years]").prop('required', false);
+          $("#D__ID input[name=km_year]").prop('required', false);
           $("#D__ID select[name=confidence]").prop('required', false);
-          $("#D__ID input[name=driving]").prop('required', false);
+          $("#D__ID input[name=km_years]").prop('required', false);
+          $("#D__ID input[name=prevent]").prop('required', false);
+          $("#D__ID select[name=frequency]").prop('required', false);
           $("#q2__ID").hide();
         }
       })
