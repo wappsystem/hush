@@ -45,7 +45,7 @@
         "hush-pis-data":		            {url:"$H/m/library/pis-data.html",Table:"hush-pis",form_module:"hush-pis-form",task_name:"Participant Information Sheet"},
         "hush-pis-form":		            {url:"$H/m/library/pis-form.html",Table:"hush-pis",task_name:"Participant Information Sheet"},
         "hush-consent-data":		            {url:"$H/m/library/consent-data.html",Table:"hush-consent",form_module:"hush-p1-consent-form",task_name:"Consent Form"},
-        "hush-pconsent-form":		            {url:"$H/m/library/consent-form.html",Table:"hush-consent",task_name:"Consent Form"},
+        "hush-consent-form":		            {url:"$H/m/library/consent-form.html",Table:"hush-consent",task_name:"Consent Form"},
         "hush-s-demographic-data":		            {url:"$H/m/library/demographic-data.html",Table:"hush-s-demographic",form_module:"hush-s-demographic-form",task_name:"Screening demographic"},
         "hush-s-demographic-form":		            {url:"$H/m/library/demographic-form.html",Table:"hush-s-demographic",task_name:"Screening - demographic"},
         "hush-s-isi-data":		            {url:"$H/m/library/isi-data.html",Table:"hush-s-isi",form_module:"hush-s-isi-form",task_name:"Screening - ISI"},

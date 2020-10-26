@@ -1,15 +1,24 @@
 <div id=D__ID>
     <div>
+        <!-- mobile -->
         <div class=vm-mobile>
-            <div id=vm-logo-mini-image></div>
-        <a id="vm-hamburger_button" class=vm-hamburger-button onclick="$vm.toggle()"><i class="fas fa-bars"></i></a>
+                <span id=vm-mobile-title class=vm-mobile-title>Questionnaire</span>
+                <a id="vm-hamburger_button" class=vm-hamburger-button onclick="$vm.toggle()"><i class="fa fa-bars"></i></a>
         </div>
+        <!---------->
+
+        <!-- desktop -->
         <div class=vm-desk-logo>
-                <div id=vm-logo-image></div>
+                <span id=vm-logo-label-A>HUSH</span><br>
+                <span id=vm-logo-label-B>Questionnaire Portal</span>
         </div>
-        <div id="vm-menu">
-            <a id=vm_signout onclick=$vm.signout()><i class="fas fa-user"></i> Sign Out</a>
-        </div>
+        <!---------->
+        
+        <!-- menu -->
+        <div menu id="vm-menu">
+            <a class=vm-hide id=vm_signout onclick=$vm.signout()><i class="fa fa-user"></i> Sign Out</a>
+    </div>
+        <!---------->
     </div>
     <script>
         //------------------------------------
@@ -60,23 +69,6 @@
             width:100%;
             background:rgba(0, 0, 0, 0.69);
             z-index:10;
-        }
-        #vm-logo-image{
-                margin-top: 0;
-                width:300px;
-                height:55px;
-                background: url("images/logo_large.png") no-repeat top center;
-                background-size: cover;
-                float:left;
-        }
-        #vm-logo-mini-image{
-            margin-top: 10px;
-            margin-left: 5px;
-            width:91px;
-            height:27px;
-            background: url("images/logo_small.png") no-repeat top center;
-            background-size: cover;
-            float:left;
         }
         .vm-desk-logo{float:left;padding:12px 0 0 30px;cursor:pointer;width:320px}
         #vm-menu{ float:left;padding:50px 30px 0 30px;}
