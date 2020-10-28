@@ -453,6 +453,17 @@
                         $('#Structured_Performance_req__ID').val("")
                     }
                 }
+                else{
+                    console.log("BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB")
+                    $('<style>#Work_con__ID input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 0; height: 0; background: #d3d3d3; cursor: pointer; }</style>').appendTo('head');
+                    $('<style>#Incidental_con__ID input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 0; height: 0; background: #EA7859; cursor: pointer; }</style>').appendTo('head');
+                    $('<style>#Leisure_con__ID input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 0; height: 0; background: #EA7859; cursor: pointer; }</style>').appendTo('head');
+                    $('<style>#Structured_Exertion_con__ID input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 0; height: 0; background: #EA7859; cursor: pointer; }</style>').appendTo('head');
+                    $('<style>#Structured_Enjoyment_con__ID input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 0; height: 0; background: #d3d3d3; cursor: pointer; }</style>').appendTo('head');
+                    $('<style>#Structured_Pain_con__ID input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 0; height: 0; background: #EA7859; cursor: pointer; }</style>').appendTo('head');
+                    $('<style>#Structured_Pain_After_con__ID input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 0; height: 0; background: #EA7859; cursor: pointer; }</style>').appendTo('head');
+                    $('<style>#Structured_Performance_con__ID input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 0; height: 0; background: #EA7859; cursor: pointer; }</style>').appendTo('head');
+                }
                 $('#title__ID').text($vm.module_list[$vm.vm['__ID'].name].task_name);
                 //-------------------------------
                 if ($('#D__ID [name="Work_check"]:checked').val() == 'on') {
