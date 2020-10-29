@@ -21,7 +21,7 @@
                                         child_panel2:"panel-child2",
                                         questionnaire_setup:"online-questionnaire-setup-hush",
                                         online_questionnaire:"online-questionnaire-app-hush",
-                                        participant_id:{field1:"Subject_ID",field2:"Subject_Initials"},
+                                        participant_id:{field1:"Subject_ID",field2:"Screening_Number"},
                                         query_a:{I2:{"$lt":2}} 
                                     },
                                     

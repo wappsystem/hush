@@ -2,7 +2,6 @@
     var modules={
         "panel-main":    			{url:"$H/m/panel-main.html",router:1},
         "panel-child":    			{url:"$H/m/panel-child.html"},
-        "panel-export-part1":       {url:"$H/m/panel-export-part1.html",router:1},
         "panel-export-screening":   {url:"$H/m/panel-export-screening.html",router:1},
         "panel-export-baseline":    {url:"$H/m/panel-export-baseline.html",router:1},
         "panel-export-week2":    {url:"$H/m/panel-export-week2.html",router:1},
@@ -15,20 +14,10 @@
         "export-form-hush": {url:"$H/m/export-form.html",Table:"hush-export"},
         
         "participant-data":   		{url:"$H/m/participant/participant-data.html",Table:"hush-participant",form_module:"participant-form",router:1,
-                                            child_panel1:"panel-child1",
-                                            child_panel2:"panel-child2",
+                                            child_panel:"panel-child",
                                             questionnaire_setup:"online-questionnaire-setup-hush",
                                             online_questionnaire:"online-questionnaire-app-hush"
-                                        },
-        "participant-active-data":   		{url:"$H/m/participant/participant-data.html",Table:"hush-participant",form_module:"participant-form",router:1,
-                                        child_panel1:"panel-child1",
-                                        child_panel2:"panel-child2",
-                                        questionnaire_setup:"online-questionnaire-setup-hush",
-                                        online_questionnaire:"online-questionnaire-app-hush",
-                                        participant_id:{field1:"Subject_ID",field2:"Subject_Initials"},
-                                        query_a:{I2:{"$lt":2}} 
-                                    },
-                                    
+                                        },                                    
         "participant-form":   		{url:"$H/m/participant/participant-form.html",Table:"hush-participant"},
 
         "online-questionnaire-setup-hush": 	{url:"$H/m/oq-setup.html",Table:"hush-participant"},
