@@ -26,6 +26,11 @@
         "notes-data":  	                    {url:"$H/m/library/notes-data.html",Table:"hush-notes",form_module:"notes-form",router:1},
         "notes-form":  	                    {url:"$H/m/library/notes-form.html",Table:"hush-notes"},
 
+        "panel-main-recruitment":    			{url:"$H/m/library/recruitment-all-data.html",Table:"hush-recruitment-record"},
+        "panel-main-recruitment-eligible":     {url:"$H/m/library/recruitment-eligible-data.html",Table:"hush-recruitment-record"},
+        "panel-main-recruitment-non-eligible": {url:"$H/m/library/recruitment-non-eligible-data.html",Table:"hush-recruitment-record"},
+
+
         "hush-randomisation-table-data":		    {url:"$H/m/library/randomisation-table-data.html",Table:"hush-randomisation-table",form_module:"hush-randomisation-table-form"},
         "hush-randomisation-table-form":		    {url:"$H/m/library/randomisation-table-form.html",Table:"hush-randomisation-table"},
         "hush-randomisation-upload-data":		    {url:"$H/m/library/randomisation-upload-data.html",Table:"hush-randomisation-upload",form_module:"hush-randomisation-upload-form",task_name:"Randomisation Document"},
