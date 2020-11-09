@@ -1,0 +1,171 @@
+<div id=D__ID>
+    <!--third html start -->
+    <div class="container mt-95 mb-3">
+        <div class="row">
+            <!-- form container start -->
+            <div class="col-12 formbox">
+                <div class="row text-left">
+                    <div class="col-12">
+                        <!-- form start -->
+                        <form id=F__ID>
+                            <h3>Information Sheet</h3>
+                            <!-- form group -->
+                            <!-- participant part for all tsak forms -------------------->
+                            <div id="participant_div__ID">
+                                <div class="form-group">
+                                   <fieldset class="subquestions">
+                                       <label ><span class="">Screening Number</span>
+                                           <input type=text name="Participant" class=form-control id=Participant__ID data-id="Participant"/>
+                                       </label><br>
+                                       <label ><span class="">Participant ID</span>
+                                           <input type=text name="Participant_uid" class=form-control readonly />
+                                       </label>
+                                    </fieldset>
+                                </div>
+                            </div>
+                            <div class="form-group"  style="padding-left: 50px!important;padding-right: 50px!important;">
+                                <fieldset class="text-center">
+                                    <h4 style='font-size:1.3rem;font-weight:bold'>Research study: 
+                                    </h4>
+                                    <h6 style='font-size:1.1rem;font-weight:bold'>INFORMATION FOR PARTICIPANTS
+                                    </h6>
+                                </fieldset>
+                                <fieldset class="text-left">
+                                    <br><br> 
+                                    <h5 style='font-size:1.2rem;font-weight:bold'>Background</h5>
+                                    <br><br>                                     
+                                    <b>The study is being conducted by the following researchers: </b><br>
+                                    <br><br> 
+                                    <b>Study Coordinator: </b><br>
+                                    <br><br>
+                                </fieldset>
+                                <fieldset class="text-center">
+                                    <h6>This information sheet is for you to keep. 
+                                    </h6>
+                                </fieldset>
+                            </div>
+                            <div class="form-group">
+                                <fieldset class="subquestions">
+                                    <h4>By ticking 'Yes', I have read and understand the information given.</h4>
+                                    <label class="radiobuttons">
+                                        <input type="radio" name="pis" value="Yes" required>
+                                        <span class="checkmark"></span> Yes</label>
+                                    <label class="radiobuttons">
+                                        <input type="radio" name="pis" value="No">
+                                        <span class="checkmark"></span> No</label>
+                                </fieldset>
+                            </div>
+                            <div class="col-lg-12 col-sm-12" id=pdfs__ID>
+                                <a href="images/pis.pdf"
+                                    target="_blank">
+                                    <div class="downloads">
+                                        <div class="col-lg-12 col-sm-12 pl-0 pr-0"> <img
+                                                src="images/pdf-icon.png" width="48"
+                                                height="auto" alt="download pdf" />
+                                            <h5>Participant's Information Sheet</h5>
+                                            <p>Click here to download this document as a PDF</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <hr>
+                            <div id=pis_no_text__ID>
+                                <div class="form-group">
+                                    <fieldset class="subquestions">
+                                        <h4>In order to proceed, you will need to have read and understood the
+                                            information. If you have any questions, please feel free to contact ..
+                                        </h4>
+                                    </fieldset>
+                                </div>
+                            </div>
+                            <div >
+                                <button type="submit" id="submit__ID" class="btn btn-primary btn-lg">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function F__ID() {
+            //-------------------------------------
+            VmInclude: __COMPONENT__/f/form.01.js
+            VmInclude: __CURRENT_PATH__/shared-form.js
+            //-------------------------------------
+            m.default_load = m.load;
+            m.load = function () {
+                m.default_load();
+                $('#submit__ID').show(); $('#pis_no_text__ID').hide();
+                $('#D__ID').scrollTop(0);
+                $(window).scrollTop(0);
+                //console.log("pis "+JSON.stringify(m.input))
+                m.input.goback=1;
+            }
+            //-------------------------------
+            $("#D__ID input[name=pis]").on('click', function () {
+                if ($(this).attr('value') == 'Yes') { $('#submit__ID').show(); $('#pis_no_text__ID').hide(); }
+                else { $('#submit__ID').hide(); $('#pis_no_text__ID').show(); }
+            })
+            //-------------------------------------
+        }
+    </script>
+    <style>
+        #D__ID {
+            height: 100%;
+            animation: vm_module_fadein 1.0s;
+            /*background-color: #fff;*/
+            overflow: auto;
+        }
+
+        #D__ID .downloads {
+            border-top-style: solid;
+            border-top-color: white;
+            border-top-width: 1px;
+            display: inline-block;
+            width: 100%;
+            padding-top: 10px;
+            margin-top: 10px;
+            margin-bottom: -10px;
+        }
+
+        #D__ID .downloads:hover {
+            opacity: 0.95;
+        }
+
+        #D__ID .downloads h5 {
+            font-family: 'Roboto Slab';
+            font-size: 22px;
+            color: #45496A;
+            letter-spacing: 0;
+        }
+
+        #D__ID .downloads h5:hover {
+            text-decoration: underline;
+        }
+
+        #D__ID .downloads p {
+            font-family: 'Nunito Sans';
+            font-size: 14px;
+            color: #000;
+            letter-spacing: 0;
+        }
+
+        #D__ID .downloads img {
+            float: right;
+            margin-left: 5px
+        }
+
+        #D__ID .small-text {
+            font-family: 'Nunito Sans';
+            font-size: 0.6em
+        }
+        VmInclude:__CURRENT_PATH__/wappsystem-form.css
+        #D__ID .formgroup h4 {
+            font-size: 1.4em
+        }
+        #D__ID .formgroup h6 {
+            font-size: 1.2em
+        }
+    </style>
+</div>
