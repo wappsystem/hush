@@ -339,24 +339,24 @@
          var before_submit=m.before_submit;
             m.before_submit=function(data,index){
               var caffeine=0
-              if($("input[name='instant_coffee']").val()!=0) data.instant_coffee_caffeine=(parseFloat($("input[name='instant_coffee']").val())*parseFloat($("input[name='instant_coffee_freq']:checked").val())).toFixed(1);
+              if($("input[name='instant_coffee']").val()!=0) data.instant_coffee_caffeine=((parseFloat($("input[name='instant_coffee']").val())*parseFloat($("input[name='instant_coffee_freq']:checked").val()))*98).toFixed(0);
               else data.instant_coffee_caffeine='0';
-              if($("input[name='small_coffee']").val()!=0) data.small_coffee_caffeine=(parseFloat($("input[name='small_coffee']").val())*parseFloat($("input[name='small_coffee_freq']:checked").val())).toFixed(1);
+              if($("input[name='small_coffee']").val()!=0) data.small_coffee_caffeine=((parseFloat($("input[name='small_coffee']").val())*parseFloat($("input[name='small_coffee_freq']:checked").val()))*129).toFixed(0);
               else data.small_coffee_caffeine='0';
-              if($("input[name='medium_coffee']").val()!=0) data.medium_coffee_caffeine=(parseFloat($("input[name='medium_coffee']").val())*2*parseFloat($("input[name='medium_coffee_freq']:checked").val())).toFixed(1);
+              if($("input[name='medium_coffee']").val()!=0) data.medium_coffee_caffeine=((parseFloat($("input[name='medium_coffee']").val())*parseFloat($("input[name='medium_coffee_freq']:checked").val()))*258).toFixed(0);
               else data.medium_coffee_caffeine='0';
-              if($("input[name='large_coffee']").val()!=0) data.large_coffee_caffeine=(parseFloat($("input[name='large_coffee']").val())*3*parseFloat($("input[name='large_coffee_freq']:checked").val())).toFixed(1);
+              if($("input[name='large_coffee']").val()!=0) data.large_coffee_caffeine=((parseFloat($("input[name='large_coffee']").val())*parseFloat($("input[name='large_coffee_freq']:checked").val()))*387).toFixed(0);
               else data.large_coffee_caffeine='0';
-              if($("input[name='ice_coffee']").val()!=0) data.ice_coffee_caffeine=(parseFloat($("input[name='ice_coffee']").val())*parseFloat($("input[name='ice_coffee_freq']:checked").val())).toFixed(1);
+              if($("input[name='ice_coffee']").val()!=0) data.ice_coffee_caffeine=((parseFloat($("input[name='ice_coffee']").val())*parseFloat($("input[name='ice_coffee_freq']:checked").val()))*110).toFixed(0);
               else data.ice_coffee_caffeine='0';
-              if($("input[name='tea']").val()!=0) data.tea_caffeine=(parseFloat($("input[name='tea']").val())*parseFloat($("input[name='tea_freq']:checked").val())).toFixed(1);
+              if($("input[name='tea']").val()!=0) data.tea_caffeine=((parseFloat($("input[name='tea']").val())*parseFloat($("input[name='tea_freq']:checked").val()))*32).toFixed(0);
               else data.tea_caffeine='0';
-              if($("input[name='cola']").val()!=0) data.cola_caffeine=(parseFloat($("input[name='cola']").val())*parseFloat($("input[name='cola_freq']:checked").val())).toFixed(1);
+              if($("input[name='cola']").val()!=0) data.cola_caffeine=((parseFloat($("input[name='cola']").val())*parseFloat($("input[name='cola_freq']:checked").val()))*43).toFixed(0);
               else data.cola_caffeine='0';
-              if($("input[name='energy']").val()!=0) data.energy_caffeine=(parseFloat($("input[name='energy']").val())*parseFloat($("input[name='energy_freq']:checked").val())).toFixed(1);
+              if($("input[name='energy']").val()!=0) data.energy_caffeine=((parseFloat($("input[name='energy']").val())*parseFloat($("input[name='energy_freq']:checked").val()))*82).toFixed(0);
               else data.energy_caffeine='0';
-              console.log("AAAA: "+ $("input[name='instant_coffee_freq']:checked").val())
-              data.caffeine=(parseFloat(data.instant_coffee_caffeine)+parseFloat(data.small_coffee_caffeine)+parseFloat(data.medium_coffee_caffeine)+parseFloat(data.large_coffee_caffeine)+parseFloat(data.ice_coffee_caffeine)+parseFloat(data.tea_caffeine)+parseFloat(data.cola_caffeine)+parseFloat(data.energy_caffeine)).toFixed(1)
+              //console.log("AAAA: "+ $("input[name='instant_coffee_freq']:checked").val())
+              data.total_mean_caffeine=(parseFloat(data.instant_coffee_caffeine)+parseFloat(data.small_coffee_caffeine)+parseFloat(data.medium_coffee_caffeine)+parseFloat(data.large_coffee_caffeine)+parseFloat(data.ice_coffee_caffeine)+parseFloat(data.tea_caffeine)+parseFloat(data.cola_caffeine)+parseFloat(data.energy_caffeine)).toFixed(0)
               return before_submit(data,index);
           }
           //-------------------------------------
