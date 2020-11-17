@@ -40,7 +40,9 @@
                 </div>
               </div>
               <div class="form-group">
-                <h4>2. Please indicate the intensity of your <b>best</b> pain levels over the past 2 weeks on a scale of 0 (no pain) to 10 (worst pain imaginable)</h4>
+                <h4>2. Over the past 2 weeks, how would you rate
+                  your pain on a good day?<br> <i>For an example, your pain might be 2/10 on a
+                    good day.</i></h4>
                 <div class="questiongroup">
                   <div class=nprs_2__ID style='position:relative;height:111px; left: 0px; top: 0px; width: 400px;'>
                     <img src='__CURRENT_PATH__/nprs.png' />
@@ -50,7 +52,9 @@
                 </div>
               </div>
               <div class="form-group">
-                <h4>3. Please indicate the intensity of your <b>worst</b> pain levels over the past 2 weeks on a scale of 0 (no pain) to 10 (worst pain imaginable)</h4>
+                <h4>3. Over the past 2 weeks, how would you rate
+                  your pain on a bad day?<br><i>For an example, your pain might be 8/10 on a
+                    bad day.</i></h4>
                 <div class="questiongroup">
                   <div class=nprs_3__ID style='position:relative;height:111px; left: 0px; top: 0px; width: 400px;'>
                     <img src='__CURRENT_PATH__/nprs.png' />
@@ -79,42 +83,37 @@
     var dx;
     //-------------------------------------
     var load2 = m.load;
-    m.load = function () {
+    m.load = function (){  
       load2();
-      if (m.input.record.Data.nprs_1 == undefined) {
+      if(m.input.record==undefined){
         $('#indicator_1__ID').hide();
-        position_1 = "";
-      }
-      else {
-        $('#indicator_1__ID').show();
-        position_1 = parseFloat(m.input.record.Data.nprs_1)*10;
-        dx = position_1 / 100 * 344 + 19
-        $('#indicator_1__ID').css('margin-left', dx.toString() + 'px');
-      }
-      //-------------------------------------
-      if (m.input.record.Data.nprs_2 == undefined) {
         $('#indicator_2__ID').hide();
-        position_2 = "";
-      }
-      else {
-        $('#indicator_2__ID').show();
-        position_2 = parseFloat(m.input.record.Data.nprs_2)*10;
-        dx = position_2 / 100 * 344 + 19
-        $('#indicator_2__ID').css('margin-left', dx.toString() + 'px');
-      }
-      //-------------------------------------
-      if (m.input.record.Data.nprs_3 == undefined) {
         $('#indicator_3__ID').hide();
-        position_3 = "";
       }
-      else {
-        $('#indicator_3__ID').show();
-        position_3 = parseFloat(m.input.record.Data.nprs_3)*10;
-        dx = position_3 / 100 * 344 + 19
-        $('#indicator_3__ID').css('margin-left', dx.toString() + 'px');
+      else{
+        if (m.input.record.Data.nprs_1 != undefined) {
+          $('#indicator_1__ID').show();
+          position_1 = parseFloat(m.input.record.Data.nprs_1)*10;
+          dx = position_1 / 100 * 344 + 19
+          $('#indicator_1__ID').css('margin-left', dx.toString() + 'px');
+        }
+        //-------------------------------------
+        if (m.input.record.Data.nprs_2 != undefined) {
+          $('#indicator_2__ID').show();
+          position_2 = parseFloat(m.input.record.Data.nprs_2)*10;
+          dx = position_2 / 100 * 344 + 19
+          $('#indicator_2__ID').css('margin-left', dx.toString() + 'px');
+        }
+        //-------------------------------------
+        if (m.input.record.Data.nprs_3 != undefined) {
+          $('#indicator_3__ID').show();
+          position_3 = parseFloat(m.input.record.Data.nprs_3)*10;
+          dx = position_3 / 100 * 344 + 19
+          $('#indicator_3__ID').css('margin-left', dx.toString() + 'px');
+        }
       }
       //-------------------------------------
-  }
+    }
     //-------------------------------
     $('.nprs_1__ID').on('click', function () {
       $('#indicator_1__ID').show()

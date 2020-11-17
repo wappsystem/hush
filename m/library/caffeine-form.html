@@ -29,7 +29,7 @@
                   <tr>
                     <th>Food/Fluid</th>
                     <th>Serve</th>
-                    <th>Count (0 for none)</th>
+                    <th>Count</th>
                     <th>Fequency</th>
                   </tr>
                   <tr>
@@ -37,6 +37,10 @@
                     <td>1 tsp coffee</td>
                     <td><input class="form-control" type="number" min=0 max=20 name="instant_coffee" id=instant_coffee__ID required ></td>
                     <td>
+                      <label class="radiobuttons">
+                        <input type="radio" name="instant_coffee_freq" value="0" required >
+                        <span class="checkmark"></span> None
+                      </label><br>
                       <label class="radiobuttons">
                         <input type="radio" name="instant_coffee_freq" value="1">
                         <span class="checkmark"></span> Daily
@@ -60,6 +64,10 @@
                     <td><input class="form-control" type="number" min=0 max=20 name="small_coffee" id=small_coffee__ID required ></td>
                     <td>
                       <label class="radiobuttons">
+                        <input type="radio" name="small_coffee_freq" value="0" required >
+                        <span class="checkmark"></span> None
+                      </label><br>
+                      <label class="radiobuttons">
                         <input type="radio" name="small_coffee_freq" value="1">
                         <span class="checkmark"></span> Daily
                       </label><br>
@@ -82,6 +90,10 @@
                     <td><input class="form-control" type="number" min=0 max=20 name="medium_coffee" id=medium_coffee__ID required ></td>
                     <td>
                       <label class="radiobuttons">
+                        <input type="radio" name="medium_coffee_freq" value="0" required >
+                        <span class="checkmark"></span> None
+                      </label><br>
+                      <label class="radiobuttons">
                         <input type="radio" name="medium_coffee_freq" value="1">
                         <span class="checkmark"></span> Daily
                       </label><br>
@@ -103,6 +115,10 @@
                     </td>
                     <td><input class="form-control" type="number" min=0 max=20 name="large_coffee" id=large_coffee__ID required ></td>
                     <td>
+                      <label class="radiobuttons">
+                        <input type="radio" name="large_coffee_freq" value="0" required >
+                        <span class="checkmark"></span> None
+                      </label><br>
                       <label class="radiobuttons">
                         <input type="radio" name="large_coffee_freq" value="1">
                         <span class="checkmark"></span> Daily
@@ -127,6 +143,10 @@
                     <td><input class="form-control" type="number" min=0 max=20 name="ice_coffee" id=ice_coffee__ID required ></td>
                     <td>
                       <label class="radiobuttons">
+                        <input type="radio" name="ice_coffee_freq" value="0" required >
+                        <span class="checkmark"></span> None
+                      </label><br>
+                      <label class="radiobuttons">
                         <input type="radio" name="ice_coffee_freq" value="1">
                         <span class="checkmark"></span> Daily
                       </label><br>
@@ -147,6 +167,10 @@
                     </td>
                     <td><input class="form-control" type="number" min=0 max=20 name="tea" id=tea__ID required ></td>
                     <td>
+                      <label class="radiobuttons">
+                        <input type="radio" name="tea_freq" value="0" required >
+                        <span class="checkmark"></span> None
+                      </label><br>
                       <label class="radiobuttons">
                         <input type="radio" name="tea_freq" value="1">
                         <span class="checkmark"></span> Daily
@@ -170,6 +194,10 @@
                     <td><input class="form-control" type="number" min=0 max=20 name="cola" id=cola__ID required ></td>
                     <td>
                       <label class="radiobuttons">
+                        <input type="radio" name="cola_freq" value="0" required >
+                        <span class="checkmark"></span> None
+                      </label><br>
+                      <label class="radiobuttons">
                         <input type="radio" name="cola_freq" value="1">
                         <span class="checkmark"></span> Daily
                       </label><br>
@@ -192,6 +220,10 @@
                     <td><input class="form-control" type="number" min=0 max=20 name="energy" id=energy__ID required ></td>
                     <td>
                       <label class="radiobuttons">
+                        <input type="radio" name="energy_freq" value="0" required >
+                        <span class="checkmark"></span> None
+                      </label><br>
+                      <label class="radiobuttons">
                         <input type="radio" name="energy_freq" value="1">
                         <span class="checkmark"></span> Daily
                       </label><br>
@@ -207,7 +239,9 @@
                   </tr>
                 </table>
           </div>
-          <button type="submit" id="submit__ID" class="btn btn-primary btn-lg">Submit</button>
+          <div class="form-group">
+            <button type="submit" id="submit__ID" class="btn btn-primary btn-lg">Submit</button>
+          </div>
           </form>
         </div>
       </div>
@@ -222,138 +256,138 @@
     var load2=m.load;
         m.load=function(){
           load2();
-          if($("input[name='instant_coffee']").val()!='0'){
-            $("input[name='instant_coffee_freq']").prop('required', true);
+          if($("input[name='instant_coffee_freq']:checked").val()!='0'){
+            $("input[name='instant_coffee]").prop('required', true);
           }
           else {
-            $("input[name='instant_coffee_freq']").prop('required', false);
+            $("input[name='instant_coffee]").prop('required', false);
           }
-          if($("input[name='small_coffee']").val()!='0'){
-            $("input[name='small_coffee_freq']").prop('required', true);
-          }
-          else {
-            $("input[name='small_coffee_freq']").prop('required', false);
-          }
-          if($("input[name='medium_coffee']").val()!='0'){
-            $("input[name='medium_coffee_freq']").prop('required', true);
+          if($("input[name='small_coffee_freq']:checked").val()!='0'){
+            $("input[name='small_coffee]").prop('required', true);
           }
           else {
-            $("input[name='medium_coffee_freq']").prop('required', false);
+            $("input[name='small_coffee]").prop('required', false);
           }
-          if($("input[name='large_coffee']").val()!='0'){
-            $("input[name='large_coffee_freq']").prop('required', true);
-          }
-          else {
-            $("input[name='large_coffee_freq']").prop('required', false);
-          }
-          if($("input[name='ice_coffee']").val()!='0'){
-            $("input[name='ice_coffee_freq']").prop('required', true);
+          if($("input[name='medium_coffee_freq']:checked").val()!='0'){
+            $("input[name='medium_coffee]").prop('required', true);
           }
           else {
-            $("input[name='ice_coffee_freq']").prop('required', false);
+            $("input[name='medium_coffee]").prop('required', false);
           }
-          if($("input[name='tea']").val()!='0'){
-            $("input[name='tea_freq']").prop('required', true);
-          }
-          else {
-            $("input[name='tea_freq']").prop('required', false);
-          }
-          if($("input[name='cola']").val()!='0'){
-            $("input[name='cola_freq']").prop('required', true);
+          if($("input[name='large_coffee_freq']:checked").val()!='0'){
+            $("input[name='large_coffee]").prop('required', true);
           }
           else {
-            $("input[name='cola_freq']").prop('required', false);
+            $("input[name='large_coffee]").prop('required', false);
           }
-          if($("input[name='energy']").val()!='0'){
-            $("input[name='energy_freq']").prop('required', true);
+          if($("input[name='ice_coffee_freq']:checked").val()!='0'){
+            $("input[name='ice_coffee]").prop('required', true);
           }
           else {
-            $("input[name='energy_freq']").prop('required', false);
+            $("input[name='ice_coffee]").prop('required', false);
+          }
+          if($("input[name='tea_freq']:checked").val()!='0'){
+            $("input[name='tea]").prop('required', true);
+          }
+          else {
+            $("input[name='tea]").prop('required', false);
+          }
+          if($("input[name='cola_freq']:checked").val()!='0'){
+            $("input[name='cola]").prop('required', true);
+          }
+          else {
+            $("input[name='cola]").prop('required', false);
+          }
+          if($("input[name='energy_freq']:checked").val()!='0'){
+            $("input[name='energy]").prop('required', true);
+          }
+          else {
+            $("input[name='energy]").prop('required', false);
           }
       }
-      $("input[name='instant_coffee']").on('change',function(){
-        if($("input[name='instant_coffee']").val()!='0'){
-            $("input[name='instant_coffee_freq']").prop('required', true);
+      $("input[name='instant_coffee_freq']").on('click',function(){
+        if($("input[name='instant_coffee_freq']:checked").val()!='0'){
+            $("input[name='instant_coffee']").prop('required', true);
           }
           else {
-            $("input[name='instant_coffee_freq']").prop('required', false);
+            $("input[name='instant_coffee']").prop('required', false);
           }
       })
-      $("input[name='small_coffee']").on('change',function(){
-          if($("input[name='small_coffee']").val()!='0'){
-            $("input[name='small_coffee_freq']").prop('required', true);
+      $("input[name='small_coffee_freq']").on('click',function(){
+          if($("input[name='small_coffee_freq']:checked").val()!='0'){
+            $("input[name='small_coffee']").prop('required', true);
           }
           else {
-            $("input[name='small_coffee_freq']").prop('required', false);
+            $("input[name='small_coffee']").prop('required', false);
           }
         })
-        $("input[name='medium_coffee']").on('change',function(){
-          if($("input[name='medium_coffee']").val()!='0'){
-            $("input[name='medium_coffee_freq']").prop('required', true);
+        $("input[name='medium_coffee_freq']").on('click',function(){
+          if($("input[name='medium_coffee_freq']:checked").val()!='0'){
+            $("input[name='medium_coffee']").prop('required', true);
           }
           else {
-            $("input[name='medium_coffee_freq']").prop('required', false);
+            $("input[name='medium_coffee']").prop('required', false);
           }
         })
-        $("input[name='large_coffee']").on('change',function(){
-          if($("input[name='large_coffee']").val()!='0'){
-            $("input[name='large_coffee_freq']").prop('required', true);
+        $("input[name='large_coffee_freq']").on('click',function(){
+          if($("input[name='large_coffee_freq']:checked").val()!='0'){
+            $("input[name='large_coffee']").prop('required', true);
           }
           else {
-            $("input[name='large_coffee_freq']").prop('required', false);
+            $("input[name='large_coffee']").prop('required', false);
           }
         })
-        $("input[name='ice_coffee']").on('change',function(){
-          if($("input[name='ice_coffee']").val()!='0'){
-            $("input[name='ice_coffee_freq']").prop('required', true);
+        $("input[name='ice_coffee_freq']").on('click',function(){
+          if($("input[name='ice_coffee_freq']:checked").val()!='0'){
+            $("input[name='ice_coffee']").prop('required', true);
           }
           else {
-            $("input[name='ice_coffee_freq']").prop('required', false);
+            $("input[name='ice_coffee']").prop('required', false);
           }
         })
-        $("input[name='tea']").on('change',function(){
-          if($("input[name='tea']").val()!='0'){
-            $("input[name='tea_freq']").prop('required', true);
+        $("input[name='tea_freq']").on('click',function(){
+          if($("input[name='tea_freq']:checked").val()!='0'){
+            $("input[name='tea']").prop('required', true);
           }
           else {
-            $("input[name='tea_freq']").prop('required', false);
+            $("input[name='tea']").prop('required', false);
           }
         })
-        $("input[name='cola']").on('change',function(){
-          if($("input[name='cola']").val()!='0'){
-            $("input[name='cola_freq']").prop('required', true);
+        $("input[name='cola_freq']").on('click',function(){
+          if($("input[name='cola_freq']:checked").val()!='0'){
+            $("input[name='cola']").prop('required', true);
           }
           else {
-            $("input[name='cola_freq']").prop('required', false);
+            $("input[name='cola']").prop('required', false);
           }
         })
-        $("input[name='energy']").on('change',function(){
-          if($("input[name='energy']").val()!='0'){
-            $("input[name='energy_freq']").prop('required', true);
+        $("input[name='energy_freq']").on('click',function(){
+          if($("input[name='energy_freq']:checked").val()!='0'){
+            $("input[name='energy']").prop('required', true);
           }
           else {
-            $("input[name='energy_freq']").prop('required', false);
+            $("input[name='energy']").prop('required', false);
           }
         })
          //-------------------------------------
          var before_submit=m.before_submit;
             m.before_submit=function(data,index){
               var caffeine=0
-              if($("input[name='instant_coffee']").val()!=0) data.instant_coffee_caffeine=((parseFloat($("input[name='instant_coffee']").val())*parseFloat($("input[name='instant_coffee_freq']:checked").val()))*98).toFixed(0);
+              if($("input[name='instant_coffee_freq']:checked").val()!=0) data.instant_coffee_caffeine=((parseFloat($("input[name='instant_coffee']").val())*parseFloat($("input[name='instant_coffee_freq']:checked").val()))*98).toFixed(0);
               else data.instant_coffee_caffeine='0';
-              if($("input[name='small_coffee']").val()!=0) data.small_coffee_caffeine=((parseFloat($("input[name='small_coffee']").val())*parseFloat($("input[name='small_coffee_freq']:checked").val()))*129).toFixed(0);
+              if($("input[name='small_coffee_freq']:checked").val()!=0) data.small_coffee_caffeine=((parseFloat($("input[name='small_coffee']").val())*parseFloat($("input[name='small_coffee_freq']:checked").val()))*129).toFixed(0);
               else data.small_coffee_caffeine='0';
-              if($("input[name='medium_coffee']").val()!=0) data.medium_coffee_caffeine=((parseFloat($("input[name='medium_coffee']").val())*parseFloat($("input[name='medium_coffee_freq']:checked").val()))*258).toFixed(0);
+              if($("input[name='medium_coffee_freq']:checked").val()!=0) data.medium_coffee_caffeine=((parseFloat($("input[name='medium_coffee']").val())*parseFloat($("input[name='medium_coffee_freq']:checked").val()))*258).toFixed(0);
               else data.medium_coffee_caffeine='0';
-              if($("input[name='large_coffee']").val()!=0) data.large_coffee_caffeine=((parseFloat($("input[name='large_coffee']").val())*parseFloat($("input[name='large_coffee_freq']:checked").val()))*387).toFixed(0);
+              if($("input[name='large_coffee_freq']:checked").val()!=0) data.large_coffee_caffeine=((parseFloat($("input[name='large_coffee']").val())*parseFloat($("input[name='large_coffee_freq']:checked").val()))*387).toFixed(0);
               else data.large_coffee_caffeine='0';
-              if($("input[name='ice_coffee']").val()!=0) data.ice_coffee_caffeine=((parseFloat($("input[name='ice_coffee']").val())*parseFloat($("input[name='ice_coffee_freq']:checked").val()))*110).toFixed(0);
+              if($("input[name='ice_coffee_freq']:checked").val()!=0) data.ice_coffee_caffeine=((parseFloat($("input[name='ice_coffee']").val())*parseFloat($("input[name='ice_coffee_freq']:checked").val()))*110).toFixed(0);
               else data.ice_coffee_caffeine='0';
-              if($("input[name='tea']").val()!=0) data.tea_caffeine=((parseFloat($("input[name='tea']").val())*parseFloat($("input[name='tea_freq']:checked").val()))*32).toFixed(0);
+              if($("input[name='tea_freq']:checked").val()!=0) data.tea_caffeine=((parseFloat($("input[name='tea']").val())*parseFloat($("input[name='tea_freq']:checked").val()))*32).toFixed(0);
               else data.tea_caffeine='0';
-              if($("input[name='cola']").val()!=0) data.cola_caffeine=((parseFloat($("input[name='cola']").val())*parseFloat($("input[name='cola_freq']:checked").val()))*43).toFixed(0);
+              if($("input[name='cola_freq']:checked").val()!=0) data.cola_caffeine=((parseFloat($("input[name='cola']").val())*parseFloat($("input[name='cola_freq']:checked").val()))*43).toFixed(0);
               else data.cola_caffeine='0';
-              if($("input[name='energy']").val()!=0) data.energy_caffeine=((parseFloat($("input[name='energy']").val())*parseFloat($("input[name='energy_freq']:checked").val()))*82).toFixed(0);
+              if($("input[name='energy_freq']:checked").val()!=0) data.energy_caffeine=((parseFloat($("input[name='energy']").val())*parseFloat($("input[name='energy_freq']:checked").val()))*82).toFixed(0);
               else data.energy_caffeine='0';
               //console.log("AAAA: "+ $("input[name='instant_coffee_freq']:checked").val())
               data.total_mean_caffeine=(parseFloat(data.instant_coffee_caffeine)+parseFloat(data.small_coffee_caffeine)+parseFloat(data.medium_coffee_caffeine)+parseFloat(data.large_coffee_caffeine)+parseFloat(data.ice_coffee_caffeine)+parseFloat(data.tea_caffeine)+parseFloat(data.cola_caffeine)+parseFloat(data.energy_caffeine)).toFixed(0)

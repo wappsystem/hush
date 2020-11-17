@@ -41,7 +41,9 @@
 		var setup_panel=function(){
 			//----------------------------------
 		    var ids=id_list.split(',');
-		    var txt="<ul>";
+			var txt="<ul>";
+			var count=0;
+			var quest=false;
 		    //----------------------------------
 		    for(var i=0;i<ids.length;i++){
 				var m=ids[i];
@@ -100,6 +102,8 @@
 					}
 		        }
 		        if(status[m].rid==0){
+					count++;
+					quest=true
 					$li.removeClass('li_not_allowed__ID')
 					$li.addClass('li_allowed__ID')
 		            var task_name=$li.html();
@@ -112,6 +116,14 @@
 		            });
 		            return false; // break out the loop
 		        }
+				else{
+					count++;
+					if(count==ids.length && quest==false){
+						var visit=m.split('-')
+						$vm.load_module('hush-'+visit[1]+'-thank-you-form','',{goback:1});
+					}
+
+				}
 		    })
 		    //----------------------------------
 		}
