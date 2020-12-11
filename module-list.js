@@ -56,7 +56,7 @@
         "hush-s-caffeine-form":		            {url:"$H/m/library/caffeine-form.html",Table:"hush-s-caffeine",task_name:"Screening - Caffeine intake"},
         "hush-s-alcohol-data":		            {url:"$H/m/library/alcohol-data.html",Table:"hush-s-alcohol",form_module:"hush-s-alcohol-form",task_name:"Screening - Alcohol Screen"},
         "hush-s-alcohol-form":		            {url:"$H/m/library/alcohol-form.html",Table:"hush-s-alcohol",task_name:"Screening - Alcohol Screen"},
-        "hush-s-thank-you-form":		            {url:"$H/m/library/thank-you-form.html",task_name:"Thank you for completing the SCREENING section of the survey!"},
+        "hush-s-thank-you-form":		            {url:"$H/m/library/thank-you-form.html",task_name:"Congratulations and thank you for completing the SCREENING  Section of this Survey."},
 
         "hush-bl-isi-data":		            {url:"$H/m/library/isi-data.html",Table:"hush-bl-isi",form_module:"hush-bl-isi-form",task_name:"Baseline - ISI"},
         "hush-bl-isi-form":		            {url:"$H/m/library/isi-form.html",Table:"hush-bl-isi",task_name:"Baseline - ISI"},
@@ -82,7 +82,7 @@
         "hush-bl-physical-activity-form":		            {url:"$H/m/library/physical-activity-form.html",Table:"hush-bl-physical-activity",task_name:"Baseline - Physical Activity and Sports Performance"},
         "hush-bl-minor-illnesses-data":		            {url:"$H/m/library/minor-illnesses-data.html",Table:"hush-bl-minor-illnesses",form_module:"hush-bl-minor-illnesses-form",task_name:"Baseline - Susceptibility to Minor illnesses"},
         "hush-bl-minor-illnesses-form":		            {url:"$H/m/library/minor-illnesses-form.html",Table:"hush-bl-minor-illnesses",task_name:"Baseline - Susceptibility to Minor illnesses"},
-        "hush-bl-thank-you-form":		            {url:"$H/m/library/thank-you-form.html",task_name:"Thank you for completing the BASELINE section of the survey!"},
+        "hush-bl-thank-you-form":		            {url:"$H/m/library/thank-you-form.html",task_name:"Congratulations and thank you for completing the BASELINE Section of this Survey."},
 
         "hush-w2-isi-data":		            {url:"$H/m/library/isi-data.html",Table:"hush-w2-isi",form_module:"hush-w2-isi-form",task_name:"Week 2 - ISI"},
         "hush-w2-isi-form":		            {url:"$H/m/library/isi-form.html",Table:"hush-w2-isi",task_name:"Week 2 - ISI"},
@@ -110,7 +110,7 @@
         "hush-w2-minor-illnesses-form":		            {url:"$H/m/library/minor-illnesses-form.html",Table:"hush-w2-minor-illnesses",task_name:"Week 2 - Susceptibility to Minor illnesses"},
         "hush-w2-adverse-effects-data":		            {url:"$H/m/library/adverse-effects-data.html",Table:"hush-w2-adverse-effects",form_module:"hush-w2-adverse-effects-form",task_name:"Week 2 - Adverse Effects"},
         "hush-w2-adverse-effects-form":		            {url:"$H/m/library/adverse-effects-form.html",Table:"hush-w2-adverse-effects",task_name:"Week 2 - Adverse Effects"},
-        "hush-w2-thank-you-form":		            {url:"$H/m/library/thank-you-form.html",task_name:"Thank you for completing the WEEK 2 section of the survey!"},
+        "hush-w2-thank-you-form":		            {url:"$H/m/library/thank-you-form.html",task_name:"Congratulations and thank you for completing the WEEK 2 Section of this Survey"},
 
         "hush-w4-isi-data":		            {url:"$H/m/library/isi-data.html",Table:"hush-w4-isi",form_module:"hush-w4-isi-form",task_name:"Week 4 - ISI"},
         "hush-w4-isi-form":		            {url:"$H/m/library/isi-form.html",Table:"hush-w4-isi",task_name:"Week 4 - ISI"},
@@ -142,7 +142,7 @@
         "hush-w4-sleep-diary-form":		            {url:"$H/m/library/sleep-diary-form.html",Table:"hush-w4-sleep-diary",task_name:"Week 4 - Sleep Diary"},
         "hush-w4-geneactive-data":		            {url:"$H/m/library/geneactive-data.html",Table:"hush-w4-geneactive",form_module:"hush-w4-geneactive-form",task_name:"Week 4 - GENEActive Actigraphy watch"},
         "hush-w4-geneactive-form":		            {url:"$H/m/library/geneactive-form.html",Table:"hush-w4-geneactive",task_name:"Week 4 - GENEActive Actigraphy watch"},
-        "hush-w4-thank-you-form":		            {url:"$H/m/library/thank-you-form.html",task_name:"Thank you for completing the WEEK 4 section of the survey!"},
+        "hush-w4-thank-you-form":		            {url:"$H/m/library/thank-you-form.html",task_name:"Congratulations and thank you for completing the WEEK 4 Section of this Survey"},
 
         "hush-w6-isi-data":		            {url:"$H/m/library/isi-data.html",Table:"hush-w6-isi",form_module:"hush-w6-isi-form",task_name:"Week 6 - ISI"},
         "hush-w6-isi-form":		            {url:"$H/m/library/isi-form.html",Table:"hush-w6-isi",task_name:"Week 6 - ISI"},
@@ -170,7 +170,7 @@
         "hush-w6-minor-illnesses-form":		            {url:"$H/m/library/minor-illnesses-form.html",Table:"hush-w6-minor-illnesses",task_name:"Week 6 - Susceptibility to Minor illnesses"},
         "hush-w6-adverse-effects-data":		            {url:"$H/m/library/adverse-effects-data.html",Table:"hush-w6-adverse-effects",form_module:"hush-w6-adverse-effects-form",task_name:"Week 6 - Adverse Effects"},
         "hush-w6-adverse-effects-form":		            {url:"$H/m/library/adverse-effects-form.html",Table:"hush-w6-adverse-effects",task_name:"Week 6 - Adverse Effects"},
-        "hush-w6-thank-you-form":		            {url:"$H/m/library/thank-you-form.html",task_name:"Thank you for completing the WEEK 6 section of the survey!"},
+        "hush-w6-thank-you-form":		            {url:"$H/m/library/thank-you-form.html",task_name:"Congratulations and thank you for completing the WEEK 6 Section of this Survey"},
 
         "hush-w8-isi-data":		            {url:"$H/m/library/isi-data.html",Table:"hush-w8-isi",form_module:"hush-w8-isi-form",task_name:"Week 8 - ISI"},
         "hush-w8-isi-form":		            {url:"$H/m/library/isi-form.html",Table:"hush-w8-isi",task_name:"Week 8 - ISI"},
@@ -202,7 +202,7 @@
         "hush-w8-sleep-diary-form":		            {url:"$H/m/library/sleep-diary-form.html",Table:"hush-w8-sleep-diary",task_name:"Week 8 - Sleep Diary"},
         "hush-w8-geneactive-data":		            {url:"$H/m/library/geneactive-data.html",Table:"hush-w8-geneactive",form_module:"hush-w8-geneactive-form",task_name:"Week 8 - GENEActive Actigraphy watch"},
         "hush-w8-geneactive-form":		            {url:"$H/m/library/geneactive-form.html",Table:"hush-w8-geneactive",task_name:"Week 8 - GENEActive Actigraphy watch"},
-        "hush-w8-thank-you-form":		            {url:"$H/m/library/thank-you-form.html",task_name:"Thank you for completing the WEEK 8 section of the survey!"},
+        "hush-w8-thank-you-form":		            {url:"$H/m/library/thank-you-form.html",task_name:"Congratulations and thank you for completing the WEEK 8 Section of this Survey"},
 
         "hush-w10-isi-data":		            {url:"$H/m/library/isi-data.html",Table:"hush-w10-isi",form_module:"hush-w10-isi-form",task_name:"Week 10 - ISI"},
         "hush-w10-isi-form":		            {url:"$H/m/library/isi-form.html",Table:"hush-w10-isi",task_name:"Week 10 - ISI"},
@@ -230,7 +230,7 @@
         "hush-w10-minor-illnesses-form":		            {url:"$H/m/library/minor-illnesses-form.html",Table:"hush-w10-minor-illnesses",task_name:"Week 10 - Susceptibility to Minor illnesses"},
         "hush-w10-adverse-effects-data":		            {url:"$H/m/library/adverse-effects-data.html",Table:"hush-w10-adverse-effects",form_module:"hush-w10-adverse-effects-form",task_name:"Week 10 - Adverse Effects"},
         "hush-w10-adverse-effects-form":		            {url:"$H/m/library/adverse-effects-form.html",Table:"hush-w10-adverse-effects",task_name:"Week 10 - Adverse Effects"},
-        "hush-w10-thank-you-form":		            {url:"$H/m/library/thank-you-form.html",task_name:"Thank you for completing the WEEK 10 section of the survey!"},
+        "hush-w10-thank-you-form":		            {url:"$H/m/library/thank-you-form.html",task_name:"Congratulations and thank you for completing the WEEK 10 Section of this Survey"},
 
         "hush-e-isi-data":		            {url:"$H/m/library/isi-data.html",Table:"hush-e-isi",form_module:"hush-e-isi-form",task_name:"Exit - ISI"},
         "hush-e-isi-form":		            {url:"$H/m/library/isi-form.html",Table:"hush-e-isi",task_name:"Exit - ISI"},
@@ -262,7 +262,7 @@
         "hush-e-sleep-diary-form":		            {url:"$H/m/library/sleep-diary-form.html",Table:"hush-e-sleep-diary",task_name:"Exit - Sleep Diary"},
         "hush-e-geneactive-data":		            {url:"$H/m/library/geneactive-data.html",Table:"hush-e-geneactive",form_module:"hush-e-geneactive-form",task_name:"Exit - GENEActive Actigraphy watch"},
         "hush-e-geneactive-form":		            {url:"$H/m/library/geneactive-form.html",Table:"hush-e-geneactive",task_name:"Exit - GENEActive Actigraphy watch"},
-        "hush-e-thank-you-form":		            {url:"$H/m/library/thank-you-form.html",task_name:"Thank you for completing ALL questionnaires of the survey!"},
+        "hush-e-thank-you-form":		            {url:"$H/m/library/thank-you-form.html",task_name:"Congratulations and thank you for completing the EXIT Section of this Survey"},
     }
     for(p in modules){
         $vm.module_list[p]=modules[p];
